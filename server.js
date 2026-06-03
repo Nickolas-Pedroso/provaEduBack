@@ -173,6 +173,7 @@ app.use((err, req, res, next) => {
     next();
 });
 
+const PORT = process.env.PORT || 3000;
 app.get('/', (req, res) => res.sendFile(path.join(__dirname, '..', 'public', 'index.html')));
 
-app.listen(3000, () => console.log('Servidor rodando em http://localhost:3000'));
+app.listen(PORT, () => console.log(`Servidor rodando em http://localhost:${PORT}`));
